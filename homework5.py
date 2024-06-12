@@ -6,7 +6,7 @@ print('Кортеж: ' + str(immutable_var))
 # 2 Такой кортеж изменить нельзя, так как кортеж неизменяемый объект, чтобы иметь возможность его изменять необходимо включить в состав кортежа список, например:
 immutable_var = (1, 2, ['foxtrot', 'tango', 'bravo'], 3.5, False)
 print('\nКортеж со списком внутри: ' + str(immutable_var))
-immutable_var [2][0] = 'echo'
+immutable_var [2][0] = 'echo' # [2] - отсылка к второму по счету (начиная с нуля) элементу кортежа (к списку внутри кортежа) и [0] - отсылка к первому по счету элементу списка
 immutable_var [2][1] = 'yankee'
 immutable_var [2][2] = 'zulu'
 print('\nКортеж с изменениями: ' + str(immutable_var))
@@ -14,8 +14,8 @@ print('\nКортеж с изменениями: ' + str(immutable_var))
 # 3 Создаём переменную со списком из нескольких элементов и изменяем их
 mutable_list = ['kilo', 'delta', 'charlie', 2, 3, 0.25]
 print('\n\n\n\nСписок: ' + str(mutable_list))
-mutable_list.append('mil.std_4')
+mutable_list.append('mil.std_4') # добавляем в список элемент "mil.str_4" с применением метода .append
 print('\nИзмененный вариант списка с добавлением элемента в конце: ' + str(mutable_list))
-mutable_list.remove('kilo')
-mutable_list.extend('radio')
+mutable_list.remove('kilo') # удаляем значение "kilo" из списка с применением метода .remove
+mutable_list.extend('radio') # добавляем несколько элементов значения 'radio' методом .exted с результатом 'r', 'a', 'd', 'i', 'o'
 print('\nИзмененный вариант списка с удалением первого элемента и добавлением через extend новых: ' + str(mutable_list))
